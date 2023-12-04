@@ -8,6 +8,7 @@ function App() {
     <section>
     {/* here is the  Deleter component*/}
     < IteamDeleter/>
+    <h1>--------------------------------------------------------- Button Components-----------------------------------------------------------------------------</h1>
     {/* here we are Creating the buttons and reusing them for the multiple buttons by passing props */}
     <Button type="submit" title=" Ramkumar"/>
     <Button type="submit" title="Login"/>
