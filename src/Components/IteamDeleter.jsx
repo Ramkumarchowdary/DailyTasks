@@ -1,3 +1,4 @@
+import { Button } from "@mui/material";
 import React, { useState } from "react";
 
 const CardDeleter = () => {
@@ -23,7 +24,7 @@ const CardDeleter = () => {
             <div key={index}>
               <li>
                 {element}
-                <button onClick={() => DeleatIteam(index)}>Delate</button>
+                <Button variant="contained" sx={{mb:"10px",ml:"10px"}} onClick={() => DeleatIteam(index)}>Delate</Button>
               </li>
             </div>
           );
