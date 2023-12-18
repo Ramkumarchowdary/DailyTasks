@@ -17,15 +17,7 @@ const FormValidalidation = () => {
     e.preventDefault();
     setValidatErrors(error(validat));
     setIsSubmit(true);
-   
-
   };
-  useEffect(() => {
-    // console.log(validatErrors);
-    if (Object.keys(validatErrors).length === 0 && isSubmit) {
-    //   console.log(validatErrors);
-    }
-  }, [validatErrors]);
   let error = (value) => {
     let errors = {};
     let regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
@@ -50,7 +42,16 @@ const FormValidalidation = () => {
   return (
     <div>
       {Object.keys(validatErrors).length === 0 && isSubmit ? (
-        <div style={{color:"green",border:"2px solid green",width:"100px",margin:"10px auto"}}>hiiii</div>
+        <div
+          style={{
+            color: "green",
+            border: "2px solid green",
+            width: "100px",
+            margin: "10px auto",
+          }}
+        >
+          hiiii
+        </div>
       ) : (
         <pre>{JSON.stringify(validat, undefined, 2)}</pre>
       )}
@@ -68,7 +69,7 @@ const FormValidalidation = () => {
               onChange={Update}
             />
           </div>
-          <p style={{color:"red"}}>{validatErrors.username}</p>
+          <p style={{ color: "red" }}>{validatErrors.username}</p>
           <div>
             <label>Email</label>
             <input
@@ -79,7 +80,7 @@ const FormValidalidation = () => {
               onChange={Update}
             />
           </div>
-          <p style={{color:"red"}}>{validatErrors.email}</p>
+          <p style={{ color: "red" }}>{validatErrors.email}</p>
           <div>
             <label>PassWorld</label>
             <input
@@ -90,7 +91,7 @@ const FormValidalidation = () => {
               onChange={Update}
             />
           </div>
-          <p style={{color:"red"}}>{validatErrors.password}</p>
+          <p style={{ color: "red" }}>{validatErrors.password}</p>
           <button type="submit">Login</button>
         </div>
       </form>
